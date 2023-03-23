@@ -86,9 +86,35 @@ def main():
 
     def get_comp_input(choices,gesture_list):
         import random
+        player2_choice = random.choice(gesture_list)
+        choices +=1
+        print("Player 2 ",choices,"choice is:",player2_choice, sep="")
+        return player2_choice
+    
 
+    #This function will determine our winner -best out of three wins
 
-        #MISH REFER TO PAGE 4
+    def final_winner(choices,wins,player1,player2):
+        if player1>player2:
+            print("Player 1 has",player1,"wins, so player 1 wins best out of three!")
+        elif player1<player2:
+            print("Player 2 has",player2,"wins, so player 2 wins best out of three!")
+
+    #We now send the user to the function that will allow them to restart game
+
+        choice()
+
+    #This function determines winner for each game(if not a tie). It also adds up the wins each player has,
+    #the total number of games, and it also sends the user back to the start of game if necessary
+
+    def find_winner(choices,player1_choice,player2_choice,wins,player1,player2,gesture_list,game_type,player):
+
+        #Block 1 choices
+        if player1_choice == gesture_list[0]:
+
+        
+        
+    #MISH REFER TO TOP OF PAGE 5
         
 
 

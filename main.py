@@ -111,12 +111,44 @@ def main():
 
         #Block 1 choices
         if player1_choice == gesture_list[0]:
+            if player2_choice == gesture_list[0]:
+                print("You tie. We will have to try again.")
+
+            if game_type ==1:
+                one_player_game(choices,wins,player1,player2,player)
+            elif game_type ==2:
+                print("Going back to game type 2.")
+                two_player_game(choices,wins,player1,player2,player)
+            elif player2_choice == gesture_list[1]:
+                print("Player 2 wins: SPock vaporizes Rock.")
+                wins +=1
+                player2 +=1
+                if wins <3:
+                    print("Game #", wins,"complete. Let's go again!", sep="")
+                    if game_type ==1:
+                        one_player_game(choices, wins,player1,player2,player)
+                    elif game_type ==2:
+                        print("Going back to game type 2.")
+                        two_player_game(choices,wins,player1,player2,player)
+            else:
+                print("Now we determine best out of three!")
+                final_winner(choices,wins,player1,player2)
+        elif player2_choice ==gesture_list[2]:
+            print("Player 2 wins: Paper covers Rock!")
+            wins +=1
+            player2 +=1
+            if wins <3:
+                print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                    
+
+
+
 
         
         
-    #MISH REFER TO TOP OF PAGE 5
-        
-
+    #MISH REFER TO TOP OF PAGE 6 
 
 
 

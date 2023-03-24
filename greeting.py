@@ -16,4 +16,4 @@ class GameRules(Greeting):
 
 
 
-game_greeting = GamesRules       
+game_greeting = Greeting()       

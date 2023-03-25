@@ -474,7 +474,7 @@ def main():
 
 
 
- #MISH REFER TO player2,gesture2 on page 10
+ 
 
 
 

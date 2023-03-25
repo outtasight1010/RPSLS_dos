@@ -459,6 +459,27 @@ def main():
                     two_player_game(choices, wins,player1,player2,player)
 
 
+    #This function gives the user the ability to start the entire game at the beginning or stop
+
+    def choice():
+        yes_list =["yes","y"]
+        no_list = ["no","n"]
+        answer = input("Would you like to play again?" "Y"" or ""N"":")
+        answer = answer.lower()
+
+        while answer not in yes_list and answer not in no_list:
+            print("That is not a valid entry. Please try again.")
+            answer = input("Would you like to play again?" "Y"" or ""N"":")
+            answer = answer.lower()
+        else:
+            if answer in yes_list:
+                main()
+            elif answer in no_list:
+                print("Ok, we will now stop. Thank you.")
+
+    #And of course this function is what will allow the entire program to run! 
+
+    main()
 
 
 

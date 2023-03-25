@@ -1,11 +1,11 @@
 def main():
-    from greeting import Greeting
+    from greeting import GamesRules
     choices = 0  #choice counter
     wins = 0 #win counter
     player1 = 0 #player1 win counter
     player2 = 0 #player2 win counter
     player = 0
-    game_greeting = Greeting()
+    game_greeting = GamesRules()
     game_greeting.greeting() #First we call our game greeting
 
     game = game_choice() #We assign our game type by calling our game_choice function
@@ -280,6 +280,198 @@ def main():
             else:
                 print("Now we determine best out of three!")
                 final_winner(choices, wins,player1,player2)
+        elif player2_choice == gesture_list[2]:
+            print("We have a tie. Please go again.")
+            if game_type ==1:
+                one_player_game(choices, wins, player1, player2, player)
+            elif game_type ==2:
+                print("Going back to game type 2.")
+                two_player_game(choices, wins, player1, player2, player)
+                player1 +=1
+        elif player2_choice == gesture_list[3]:
+                print("Player 2 wins: Lizard eats Paper!")
+                wins +=1
+                player2 +=1
+                if wins <3:
+                    print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                elif game_type == 2:
+                    print("Going back to game type 2.")     
+                    two_player_game(choices, wins, player1,player2,player)   
+        else:
+            print("Now we determine best out of three!")
+            final_winner(choices, wins,player1,player)
+        if player2_choice == gesture_list[4]:
+            print("Player 2 wins: Scissors cuts Paper!")
+            wins +=1
+            player2 +=1
+            if wins <3:
+                print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                elif game_type == 2:
+                    print("Going back to game type 2.")     
+                    two_player_game(choices, wins, player1,player2,player)   
+        else:
+            print("Now we determine best out of three!")
+            final_winner(choices, wins,player1,player)
+
+        #Block 4 choices
+
+        if player1_choice == gesture_list[3]:
+            if player2_choice == gesture_list[0]:
+                print("Player 2 wins: Rock crushes Lizard!")
+                wins +=1
+                player2 +=1
+                if wins <3:
+                    print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                elif game_type == 2:
+                    print("Going back to game type 2.")     
+                    two_player_game(choices, wins, player1,player2,player)   
+        else:
+            print("Now we determine best out of three!")
+            final_winner(choices, wins,player1,player)
+
+            if player2_choice == gesture_list[1]:
+                print("Player 1 wins: Lizard poisons Spock!")
+                wins +=1
+                player2 +=1
+                if wins <3:
+                    print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                elif game_type == 2:
+                    print("Going back to game type 2.")     
+                    two_player_game(choices, wins, player1,player2,player)   
+            else:
+                print("Now we determine best out of three!")
+                final_winner(choices, wins,player1,player)
+
+            if player2_choice == gesture_list[2]:
+                print("Player 1 wins: Lizard eats Paper!")
+                wins +=1
+                player2 +=1
+                if wins <3:
+                    print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                elif game_type == 2:
+                    print("Going back to game type 2.")     
+                    two_player_game(choices, wins, player1,player2,player)   
+            else:
+                print("Now we determine best out of three!")
+                final_winner(choices, wins,player1,player)
+
+            if player2_choice == gesture_list[3]:
+                print("We have a tie. Please go again.")
+                if game_type ==1:
+                    one_player_game(choices, wins, player1,player2,player)
+                elif game_type ==2:
+                    print("Going back to game type 2.")
+                    two_player_game(choices, wins, player1,player2,player)
+
+            elif player2_choice == gesture_list[4]:
+                print("Player 2 wins:Scissors decapitate Lizard!")
+                wins +=1
+                player2 +=1
+                if wins <3:
+                    print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                elif game_type == 2:
+                    print("Going back to game type 2.")     
+                    two_player_game(choices, wins, player1,player2,player)   
+            else:
+                print("Now we determine best out of three!")
+                final_winner(choices, wins,player1,player)
+
+                #Block 5 choices
+
+        if player1_choice == gesture_list[4]:
+            if player2_choice == gesture_list[0]:
+                print("Player 2 wins:Rock breaks Scissors!")
+                wins +=1
+                player2 +=1
+                if wins <3:
+                    print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                elif game_type == 2:
+                    print("Going back to game type 2.")     
+                    two_player_game(choices, wins, player1,player2,player)   
+            else:
+                print("Now we determine best out of three!")
+                final_winner(choices, wins,player1,player)
+            if player2_choice == gesture_list[1]:
+                print("Player 2 wins: Spocks smashes Scissors!")
+                wins +=1
+                player2 +=1
+                if wins <3:
+                    print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                elif game_type == 2:
+                    print("Going back to game type 2.")     
+                    two_player_game(choices, wins, player1,player2,player)   
+            else:
+                print("Now we determine best out of three!")
+                final_winner(choices, wins,player1,player)
+            if player2_choice == gesture_list[2]:
+                print("Player 1 wins: Scissors cuts Paper!")
+                wins +=1
+                player2 +=1
+                if wins <3:
+                    print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                elif game_type == 2:
+                    print("Going back to game type 2.")     
+                    two_player_game(choices, wins, player1,player2,player)   
+            else:
+                print("Now we determine best out of three!")
+                final_winner(choices, wins,player1,player)
+
+            if player2_choice == gesture_list[3]:
+                print("Player 1 wins: Scissors decapitates Lizard!")
+                wins +=1
+                player2 +=1
+                if wins <3:
+                    print("Game #",wins,"complete. Let's go again!", sep="")
+                if game_type==1:
+                    one_player_game(choices,wins,player1,player2,player)
+                elif game_type == 2:
+                    print("Going back to game type 2.")     
+                    two_player_game(choices, wins, player1,player2,player)   
+            else:
+                print("Now we determine best out of three!")
+                final_winner(choices, wins,player1,player)
+
+            
+            if player2_choice == gesture_list[4]:
+                print("We have a tie. Please go again.")
+                if game_type== 1:
+                    one_player_game(choices, wins,player1,player2,player)
+                elif game_type ==2:
+                    print("Going back to game type 2.")
+                    two_player_game(choices, wins,player1,player2,player)
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
 
 
  #MISH REFER TO player2,gesture2 on page 10
